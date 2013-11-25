@@ -1,4 +1,4 @@
-class Pequeno < Sinatra::Application
+class HomeController < ApplicationController
 
   get '/' do
 	  erb :"home/index"
