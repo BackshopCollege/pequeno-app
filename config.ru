@@ -3,6 +3,9 @@ require 'bundler'
 
 Bundler.require
 
+# realoads the app without restarting with rackup config.ru
+require 'sinatra/reloader' if development?
+
 root =  ::File.dirname(__FILE__)
 require ::File.join(root, 'pequeno')
 
