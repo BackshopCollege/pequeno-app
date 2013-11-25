@@ -1,13 +1,11 @@
-# encoding: UTF-8
+class UrlController < ApplicationController
 
-class Pequeno < Sinatra::Application
-
-	get '/url' do
+	get '/' do
 	  @urls = Url.list_all
 	  erb :"url/index"
 	end
 
-	get '/url.json' do
+	get '/.json' do
 	  json Url.list_all
 	end
 

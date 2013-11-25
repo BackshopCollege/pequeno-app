@@ -1,5 +1,8 @@
-class Pequeno < Sinatra::Application
+class AccountController < ApplicationController
   
+  get '/' do
+  end
+
 	post '/login' do
 	  User.login(params)
 	end

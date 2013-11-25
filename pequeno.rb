@@ -1,5 +1,6 @@
-class Pequeno < Sinatra::Application
+class ApplicationController < Sinatra::Application
 end
 
-require_relative 'routes/init'
+# don't like this here
+require_relative 'controllers/init'
 require_relative 'models/init'
