@@ -1,3 +1,5 @@
+require 'sinatra/reloader' if development?
+
 class Pequeno < Sinatra::Application
 end
 
