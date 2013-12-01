@@ -1,6 +1,23 @@
-class ApplicationController < Sinatra::Application
+require 'sinatra'
+
+get '/' do
+  'Welcome'
 end
 
-# don't like this here
-require_relative 'controllers/init'
-require_relative 'models/init'
+post '/login' do
+  User.login(params)
+end
+
+get '/profile' do
+end
+
+post '/config' do
+end
+
+get '/url/index.json' do
+  json Url.list_all
+end
+
+post '/url' do
+  Url.create(params)
+end
