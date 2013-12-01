@@ -15,7 +15,8 @@ post '/config' do
 end
 
 get '/url/index.json' do
-  json Url.list_all
+  list = ListUrls.new
+  json list.run
 end
 
 post '/url' do

@@ -1,11 +1,15 @@
-class Url
-  def self.list_all
-    [
-      { slang: "123", clicks: 1, stamp: Time.now},
-      { slang: "sadqw", clicks: 1, stamp: Time.now},
-      { slang: "q23r", clicks: 10, stamp: Time.now},
-      { slang: "f434", clicks: 19, stamp: Time.now},
-      { slang: "4t5t", clicks: 3, stamp: Time.now}
-    ]
+module Pequeno
+  module Entities
+
+    class Url
+      attr_accessor :slang, :clicks, :stamp
+
+      def initialize(slang: nil, clicks: 0, stamp: nil)
+        @slang = slang
+        @clicks = clicks
+        @stamp = stamp
+      end
+    end
+
   end
 end
